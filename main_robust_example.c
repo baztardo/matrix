@@ -45,16 +45,12 @@ int main() {
     // Initialize function mode
     keymap_init();
     
-    // Start scanning!
+    // TEST: Simple timer to verify timer system works
+    // Start scanning
     matrix_robust_start();
+    sleep_ms(100);  // Allow timer to stabilize
     
-    printf("Scanning active. Features enabled:\n");
-    printf("  - Hardware timer-based scanning (1kHz)\n");
-    printf("  - Thread-safe event queue\n");
-    printf("  - Ghost key detection\n");
-    printf("  - Stuck key detection (5s timeout)\n");
-    printf("  - Low power mode support\n");
-    printf("\nPress keys or type 'help' for commands\n\n");
+    printf("\n✅ Keypad ready! Press keys...\n\n");
     
     KeyEvent event;
     ErrorEvent error;
@@ -96,9 +92,9 @@ int main() {
             }
         }
         
-        // Print statistics every 10 seconds
+        // Print statistics every 60 seconds
         uint32_t now = to_ms_since_boot(get_absolute_time());
-        if (now - last_stats_time > 10000) {
+        if (now - last_stats_time > 60000) {
             ScanStatistics stats;
             matrix_robust_get_statistics(&stats);
             

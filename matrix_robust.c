@@ -116,9 +116,18 @@ void matrix_robust_set_keymap(const uint8_t custom_keymap[4][4]) {
 void matrix_robust_start(void) {
     if (!scanning_active) {
         // Start repeating timer for scanning
-        add_repeating_timer_us(-scan_interval, scan_timer_callback, NULL, &scan_timer);
-        scanning_active = true;
-        printf("Scanning started\n");
+        // Convert microseconds to milliseconds (1000us = 1ms)
+        int32_t interval_ms = scan_interval / 1000;
+        printf("Attempting to start timer with interval: %d ms\n", interval_ms);
+        bool timer_ok = add_repeating_timer_ms(interval_ms, scan_timer_callback, NULL, &scan_timer);
+        if (timer_ok) {
+            scanning_active = true;
+            printf("✅ Scanning started successfully!\n");
+        } else {
+            printf("❌ ERROR: Failed to start timer!\n");
+        }
+    } else {
+        printf("Already scanning\n");
     }
 }
 
@@ -138,7 +147,12 @@ void matrix_robust_set_error_callback(ErrorCallback callback) {
     error_callback = callback;
 }
 
+// Debug counter to verify callback is being called
+static volatile uint32_t debug_callback_count = 0;
+
 static bool scan_timer_callback(repeating_timer_t *rt) {
+    debug_callback_count++;  // Increment every time ISR fires
+    
     uint32_t scan_start = time_us_32();
     stats.total_scans++;
     
@@ -163,11 +177,11 @@ static bool scan_timer_callback(repeating_timer_t *rt) {
         
         // State machine with debouncing
         if (pressed) {
-            if (current_state == KEY_IDLE) {
-                // First detection of press
+            if (current_state == KEY_IDLE && last_change == 0) {
+                // First detection of press - start debounce timer
                 key_timestamp[current_row][col] = now;
-                key_state[current_row][col] = KEY_IDLE;  // Stay idle until debounced
-            } else if (current_state == KEY_IDLE && (now - last_change) >= debounce_time_press) {
+                // Stay in IDLE state
+            } else if (current_state == KEY_IDLE && last_change != 0 && (now - last_change) >= debounce_time_press) {
                 // Debounced press confirmed
                 
                 // Ghost key detection
@@ -218,13 +232,8 @@ static bool scan_timer_callback(repeating_timer_t *rt) {
                 }
             }
         } else {
-            // Key not pressed
+            // Key not pressed - immediate release (no debounce for now)
             if (current_state == KEY_PRESSED || current_state == KEY_HELD) {
-                // First detection of release
-                key_timestamp[current_row][col] = now;
-            } else if ((current_state == KEY_PRESSED || current_state == KEY_HELD) && 
-                       (now - last_change) >= debounce_time_release) {
-                // Debounced release confirmed
                 KeyEvent event = {
                     .key = keymap[current_row][col],
                     .state = KEY_RELEASED,
@@ -235,6 +244,7 @@ static bool scan_timer_callback(repeating_timer_t *rt) {
                 
                 key_state[current_row][col] = KEY_IDLE;
                 pressed_keys[current_row][col] = 0;
+                key_timestamp[current_row][col] = 0;  // Reset timestamp
                 
                 // Enqueue or call callback
                 if (key_callback) {

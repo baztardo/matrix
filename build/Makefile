@@ -1991,53 +1991,53 @@ keymap_functions.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/matrix_keypad.dir/build.make CMakeFiles/matrix_keypad.dir/keymap_functions.c.s
 .PHONY : keymap_functions.c.s
 
-main.o: main.c.o
-.PHONY : main.o
+main_robust_example.o: main_robust_example.c.o
+.PHONY : main_robust_example.o
 
 # target to build an object file
-main.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/matrix_keypad.dir/build.make CMakeFiles/matrix_keypad.dir/main.c.o
-.PHONY : main.c.o
+main_robust_example.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/matrix_keypad.dir/build.make CMakeFiles/matrix_keypad.dir/main_robust_example.c.o
+.PHONY : main_robust_example.c.o
 
-main.i: main.c.i
-.PHONY : main.i
+main_robust_example.i: main_robust_example.c.i
+.PHONY : main_robust_example.i
 
 # target to preprocess a source file
-main.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/matrix_keypad.dir/build.make CMakeFiles/matrix_keypad.dir/main.c.i
-.PHONY : main.c.i
+main_robust_example.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/matrix_keypad.dir/build.make CMakeFiles/matrix_keypad.dir/main_robust_example.c.i
+.PHONY : main_robust_example.c.i
 
-main.s: main.c.s
-.PHONY : main.s
+main_robust_example.s: main_robust_example.c.s
+.PHONY : main_robust_example.s
 
 # target to generate assembly for a file
-main.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/matrix_keypad.dir/build.make CMakeFiles/matrix_keypad.dir/main.c.s
-.PHONY : main.c.s
+main_robust_example.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/matrix_keypad.dir/build.make CMakeFiles/matrix_keypad.dir/main_robust_example.c.s
+.PHONY : main_robust_example.c.s
 
-matrix.o: matrix.c.o
-.PHONY : matrix.o
+matrix_robust.o: matrix_robust.c.o
+.PHONY : matrix_robust.o
 
 # target to build an object file
-matrix.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/matrix_keypad.dir/build.make CMakeFiles/matrix_keypad.dir/matrix.c.o
-.PHONY : matrix.c.o
+matrix_robust.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/matrix_keypad.dir/build.make CMakeFiles/matrix_keypad.dir/matrix_robust.c.o
+.PHONY : matrix_robust.c.o
 
-matrix.i: matrix.c.i
-.PHONY : matrix.i
+matrix_robust.i: matrix_robust.c.i
+.PHONY : matrix_robust.i
 
 # target to preprocess a source file
-matrix.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/matrix_keypad.dir/build.make CMakeFiles/matrix_keypad.dir/matrix.c.i
-.PHONY : matrix.c.i
+matrix_robust.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/matrix_keypad.dir/build.make CMakeFiles/matrix_keypad.dir/matrix_robust.c.i
+.PHONY : matrix_robust.c.i
 
-matrix.s: matrix.c.s
-.PHONY : matrix.s
+matrix_robust.s: matrix_robust.c.s
+.PHONY : matrix_robust.s
 
 # target to generate assembly for a file
-matrix.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/matrix_keypad.dir/build.make CMakeFiles/matrix_keypad.dir/matrix.c.s
-.PHONY : matrix.c.s
+matrix_robust.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/matrix_keypad.dir/build.make CMakeFiles/matrix_keypad.dir/matrix_robust.c.s
+.PHONY : matrix_robust.c.s
 
 # Help Target
 help:
@@ -2277,12 +2277,12 @@ help:
 	@echo "... keymap_functions.o"
 	@echo "... keymap_functions.i"
 	@echo "... keymap_functions.s"
-	@echo "... main.o"
-	@echo "... main.i"
-	@echo "... main.s"
-	@echo "... matrix.o"
-	@echo "... matrix.i"
-	@echo "... matrix.s"
+	@echo "... main_robust_example.o"
+	@echo "... main_robust_example.i"
+	@echo "... main_robust_example.s"
+	@echo "... matrix_robust.o"
+	@echo "... matrix_robust.i"
+	@echo "... matrix_robust.s"
 .PHONY : help
 
 

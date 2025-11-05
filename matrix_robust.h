@@ -25,8 +25,8 @@
 #define ERROR_SCAN_TIMEOUT  3
 
 // Debounce settings (in milliseconds)
-#define DEBOUNCE_PRESS_MS   20   // 20ms debounce for press
-#define DEBOUNCE_RELEASE_MS 50   // 50ms debounce for release
+#define DEBOUNCE_PRESS_MS   5    // 5ms debounce for press (faster response)
+#define DEBOUNCE_RELEASE_MS 5    // 5ms debounce for release (faster response)
 #define STUCK_KEY_TIMEOUT_MS 5000  // 5 seconds = stuck key
 
 // Scanning configuration

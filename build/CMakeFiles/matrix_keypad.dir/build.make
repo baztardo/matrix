@@ -72,33 +72,33 @@ include CMakeFiles/matrix_keypad.dir/flags.make
 CMakeFiles/matrix_keypad.dir/codegen:
 .PHONY : CMakeFiles/matrix_keypad.dir/codegen
 
-CMakeFiles/matrix_keypad.dir/main.c.o: CMakeFiles/matrix_keypad.dir/flags.make
-CMakeFiles/matrix_keypad.dir/main.c.o: /Users/ssnow/Documents/GitHub/matrix/main.c
-CMakeFiles/matrix_keypad.dir/main.c.o: CMakeFiles/matrix_keypad.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/ssnow/Documents/GitHub/matrix/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building C object CMakeFiles/matrix_keypad.dir/main.c.o"
-	/Applications/ArmGNUToolchain/14.3.rel1/arm-none-eabi/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/matrix_keypad.dir/main.c.o -MF CMakeFiles/matrix_keypad.dir/main.c.o.d -o CMakeFiles/matrix_keypad.dir/main.c.o -c /Users/ssnow/Documents/GitHub/matrix/main.c
+CMakeFiles/matrix_keypad.dir/main_robust_example.c.o: CMakeFiles/matrix_keypad.dir/flags.make
+CMakeFiles/matrix_keypad.dir/main_robust_example.c.o: /Users/ssnow/Documents/GitHub/matrix/main_robust_example.c
+CMakeFiles/matrix_keypad.dir/main_robust_example.c.o: CMakeFiles/matrix_keypad.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/ssnow/Documents/GitHub/matrix/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building C object CMakeFiles/matrix_keypad.dir/main_robust_example.c.o"
+	/Applications/ArmGNUToolchain/14.3.rel1/arm-none-eabi/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/matrix_keypad.dir/main_robust_example.c.o -MF CMakeFiles/matrix_keypad.dir/main_robust_example.c.o.d -o CMakeFiles/matrix_keypad.dir/main_robust_example.c.o -c /Users/ssnow/Documents/GitHub/matrix/main_robust_example.c
 
-CMakeFiles/matrix_keypad.dir/main.c.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing C source to CMakeFiles/matrix_keypad.dir/main.c.i"
-	/Applications/ArmGNUToolchain/14.3.rel1/arm-none-eabi/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/ssnow/Documents/GitHub/matrix/main.c > CMakeFiles/matrix_keypad.dir/main.c.i
+CMakeFiles/matrix_keypad.dir/main_robust_example.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing C source to CMakeFiles/matrix_keypad.dir/main_robust_example.c.i"
+	/Applications/ArmGNUToolchain/14.3.rel1/arm-none-eabi/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/ssnow/Documents/GitHub/matrix/main_robust_example.c > CMakeFiles/matrix_keypad.dir/main_robust_example.c.i
 
-CMakeFiles/matrix_keypad.dir/main.c.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/matrix_keypad.dir/main.c.s"
-	/Applications/ArmGNUToolchain/14.3.rel1/arm-none-eabi/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/ssnow/Documents/GitHub/matrix/main.c -o CMakeFiles/matrix_keypad.dir/main.c.s
+CMakeFiles/matrix_keypad.dir/main_robust_example.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/matrix_keypad.dir/main_robust_example.c.s"
+	/Applications/ArmGNUToolchain/14.3.rel1/arm-none-eabi/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/ssnow/Documents/GitHub/matrix/main_robust_example.c -o CMakeFiles/matrix_keypad.dir/main_robust_example.c.s
 
-CMakeFiles/matrix_keypad.dir/matrix.c.o: CMakeFiles/matrix_keypad.dir/flags.make
-CMakeFiles/matrix_keypad.dir/matrix.c.o: /Users/ssnow/Documents/GitHub/matrix/matrix.c
-CMakeFiles/matrix_keypad.dir/matrix.c.o: CMakeFiles/matrix_keypad.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/ssnow/Documents/GitHub/matrix/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building C object CMakeFiles/matrix_keypad.dir/matrix.c.o"
-	/Applications/ArmGNUToolchain/14.3.rel1/arm-none-eabi/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/matrix_keypad.dir/matrix.c.o -MF CMakeFiles/matrix_keypad.dir/matrix.c.o.d -o CMakeFiles/matrix_keypad.dir/matrix.c.o -c /Users/ssnow/Documents/GitHub/matrix/matrix.c
+CMakeFiles/matrix_keypad.dir/matrix_robust.c.o: CMakeFiles/matrix_keypad.dir/flags.make
+CMakeFiles/matrix_keypad.dir/matrix_robust.c.o: /Users/ssnow/Documents/GitHub/matrix/matrix_robust.c
+CMakeFiles/matrix_keypad.dir/matrix_robust.c.o: CMakeFiles/matrix_keypad.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/ssnow/Documents/GitHub/matrix/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building C object CMakeFiles/matrix_keypad.dir/matrix_robust.c.o"
+	/Applications/ArmGNUToolchain/14.3.rel1/arm-none-eabi/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/matrix_keypad.dir/matrix_robust.c.o -MF CMakeFiles/matrix_keypad.dir/matrix_robust.c.o.d -o CMakeFiles/matrix_keypad.dir/matrix_robust.c.o -c /Users/ssnow/Documents/GitHub/matrix/matrix_robust.c
 
-CMakeFiles/matrix_keypad.dir/matrix.c.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing C source to CMakeFiles/matrix_keypad.dir/matrix.c.i"
-	/Applications/ArmGNUToolchain/14.3.rel1/arm-none-eabi/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/ssnow/Documents/GitHub/matrix/matrix.c > CMakeFiles/matrix_keypad.dir/matrix.c.i
+CMakeFiles/matrix_keypad.dir/matrix_robust.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing C source to CMakeFiles/matrix_keypad.dir/matrix_robust.c.i"
+	/Applications/ArmGNUToolchain/14.3.rel1/arm-none-eabi/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/ssnow/Documents/GitHub/matrix/matrix_robust.c > CMakeFiles/matrix_keypad.dir/matrix_robust.c.i
 
-CMakeFiles/matrix_keypad.dir/matrix.c.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/matrix_keypad.dir/matrix.c.s"
-	/Applications/ArmGNUToolchain/14.3.rel1/arm-none-eabi/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/ssnow/Documents/GitHub/matrix/matrix.c -o CMakeFiles/matrix_keypad.dir/matrix.c.s
+CMakeFiles/matrix_keypad.dir/matrix_robust.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/matrix_keypad.dir/matrix_robust.c.s"
+	/Applications/ArmGNUToolchain/14.3.rel1/arm-none-eabi/bin/arm-none-eabi-gcc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/ssnow/Documents/GitHub/matrix/matrix_robust.c -o CMakeFiles/matrix_keypad.dir/matrix_robust.c.s
 
 CMakeFiles/matrix_keypad.dir/keymap_functions.c.o: CMakeFiles/matrix_keypad.dir/flags.make
 CMakeFiles/matrix_keypad.dir/keymap_functions.c.o: /Users/ssnow/Documents/GitHub/matrix/keymap_functions.c
@@ -1226,8 +1226,8 @@ CMakeFiles/matrix_keypad.dir/Users/ssnow/pico-sdk/src/rp2_common/pico_fix/rp2040
 
 # Object files for target matrix_keypad
 matrix_keypad_OBJECTS = \
-"CMakeFiles/matrix_keypad.dir/main.c.o" \
-"CMakeFiles/matrix_keypad.dir/matrix.c.o" \
+"CMakeFiles/matrix_keypad.dir/main_robust_example.c.o" \
+"CMakeFiles/matrix_keypad.dir/matrix_robust.c.o" \
 "CMakeFiles/matrix_keypad.dir/keymap_functions.c.o" \
 "CMakeFiles/matrix_keypad.dir/Users/ssnow/pico-sdk/src/rp2_common/pico_stdlib/stdlib.c.o" \
 "CMakeFiles/matrix_keypad.dir/Users/ssnow/pico-sdk/src/rp2_common/hardware_gpio/gpio.c.o" \
@@ -1313,8 +1313,8 @@ matrix_keypad_OBJECTS = \
 # External object files for target matrix_keypad
 matrix_keypad_EXTERNAL_OBJECTS =
 
-matrix_keypad.elf: CMakeFiles/matrix_keypad.dir/main.c.o
-matrix_keypad.elf: CMakeFiles/matrix_keypad.dir/matrix.c.o
+matrix_keypad.elf: CMakeFiles/matrix_keypad.dir/main_robust_example.c.o
+matrix_keypad.elf: CMakeFiles/matrix_keypad.dir/matrix_robust.c.o
 matrix_keypad.elf: CMakeFiles/matrix_keypad.dir/keymap_functions.c.o
 matrix_keypad.elf: CMakeFiles/matrix_keypad.dir/Users/ssnow/pico-sdk/src/rp2_common/pico_stdlib/stdlib.c.o
 matrix_keypad.elf: CMakeFiles/matrix_keypad.dir/Users/ssnow/pico-sdk/src/rp2_common/hardware_gpio/gpio.c.o

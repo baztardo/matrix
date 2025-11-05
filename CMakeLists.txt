@@ -15,8 +15,8 @@ pico_sdk_init()
 
 # Add executable
 add_executable(matrix_keypad
-    main.c
-    matrix.c
+    main_robust_example.c
+    matrix_robust.c
     keymap_functions.c
 )
 

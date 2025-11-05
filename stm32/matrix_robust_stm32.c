@@ -173,11 +173,11 @@ static void scan_matrix(void) {
         
         // State machine with debouncing
         if (pressed) {
-            if (current_state == KEY_IDLE) {
-                // First detection of press
+            if (current_state == KEY_IDLE && last_change == 0) {
+                // First detection of press - start debounce timer
                 key_timestamp[current_row][col] = now;
-                key_state[current_row][col] = KEY_IDLE;  // Stay idle until debounced
-            } else if (current_state == KEY_IDLE && (now - last_change) >= debounce_time_press) {
+                // Stay in IDLE state
+            } else if (current_state == KEY_IDLE && last_change != 0 && (now - last_change) >= debounce_time_press) {
                 // Debounced press confirmed
                 
                 // Ghost key detection
@@ -228,13 +228,8 @@ static void scan_matrix(void) {
                 }
             }
         } else {
-            // Key not pressed
+            // Key not pressed - immediate release (no debounce for now)
             if (current_state == KEY_PRESSED || current_state == KEY_HELD) {
-                // First detection of release
-                key_timestamp[current_row][col] = now;
-            } else if ((current_state == KEY_PRESSED || current_state == KEY_HELD) && 
-                       (now - last_change) >= debounce_time_release) {
-                // Debounced release confirmed
                 KeyEvent event = {
                     .key = keymap[current_row][col],
                     .state = KEY_RELEASED,
@@ -245,6 +240,7 @@ static void scan_matrix(void) {
                 
                 key_state[current_row][col] = KEY_IDLE;
                 pressed_keys[current_row][col] = 0;
+                key_timestamp[current_row][col] = 0;  // Reset timestamp
                 
                 // Enqueue or call callback
                 if (key_callback) {
