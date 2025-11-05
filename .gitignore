@@ -1,0 +1,158 @@
+# Build directories
+build/
+cmake-build-*/
+out/
+bin/
+obj/
+
+# CMake
+CMakeCache.txt
+CMakeFiles/
+cmake_install.cmake
+Makefile
+*.cmake
+!CMakeLists.txt
+CTestTestfile.cmake
+_deps/
+install_manifest.txt
+
+# Compiled files
+*.o
+*.obj
+*.elf
+*.bin
+*.hex
+*.map
+*.dis
+*.uf2
+*.d
+*.a
+*.so
+*.dll
+*.exe
+
+# Pico SDK specific
+pico_flash_region.ld
+generated/
+pioasm/
+pioasm-install/
+
+# STM32 specific
+*.axf
+*.hex
+*.elf.map
+*.list
+*.lss
+*.sym
+*.lst
+*.su
+*.ioc.bak
+
+# STM32CubeIDE
+.settings/
+.cproject
+.project
+.mxproject
+Debug/
+Release/
+*.launch
+.metadata/
+
+# VSCode
+.vscode/
+*.code-workspace
+
+# Clion / JetBrains
+.idea/
+cmake-build-*/
+
+# Vim
+*.swp
+*.swo
+*~
+
+# Emacs
+*~
+\#*\#
+.\#*
+
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+._*
+
+# Windows
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+
+# Linux
+*~
+.directory
+
+# Logs and temporary files
+*.log
+*.tmp
+*.temp
+*.bak
+*.cache
+
+# Python (if using scripts)
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+.Python
+venv/
+env/
+
+# Documentation build artifacts
+docs/_build/
+html/
+latex/
+
+# Eclipse
+.cproject
+.project
+.pydevproject
+.settings/
+
+# Keil
+*.uvguix.*
+*.uvoptx
+*.uvprojx.bak
+
+# IAR
+Debug/
+Release/
+settings/
+*.dep
+*.eww
+*.ewp
+*.ewd
+*.dni
+
+# GCC ARM Embedded
+*.o.d
+
+# Tags
+tags
+TAGS
+.tags
+.TAGS
+
+# Core dumps
+core
+core.*
+
+# Sublime Text
+*.sublime-project
+*.sublime-workspace
+
+# Backup files
+*~
+*.bak
+*.old
+*.orig
+
