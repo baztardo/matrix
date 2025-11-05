@@ -2,6 +2,27 @@
 
 Fast, non-blocking matrix keypad driver for STM32 microcontrollers using HAL library. Compatible with F4, G0, and most other STM32 series.
 
+## 📦 Two Versions Available
+
+### 🟢 Simple Version
+**Files:** `matrix_stm32.h/c`  
+**Best for:** Learning, prototyping, simple projects  
+**Features:** Basic polling-based scanning, easy to understand
+
+### 🛡️ Robust Version (NEW!)
+**Files:** `matrix_robust_stm32.h/c`  
+**Best for:** Production, safety-critical, power-sensitive applications  
+**Features:**
+- ⏱️ Hardware timer (TIM2/TIM3) for precise scanning
+- 📦 Event queue (32 events, thread-safe)
+- 🚫 Ghost key detection
+- ⚠️ Stuck key detection
+- 💤 Power management (STOP mode + EXTI wake)
+- 📊 Statistics & monitoring
+- 🔒 FreeRTOS compatible
+
+📖 **[Read ROBUST_STM32.md for setup guide](ROBUST_STM32.md)** ⭐
+
 ## Hardware Compatibility
 
 ✅ **Tested/Designed for:**
